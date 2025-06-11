@@ -1,5 +1,18 @@
-const fruits = ["яблоко", "банан", "яблоко"];
+function countWords(arr) {
+  const wordMap = new Map();
 
-const map = new Map(Object.entries(fruits));
+  for (const word of arr) {
+    if (wordMap.has(word)) {
+      // если слово уже есть, увеличиваем счётчик
+      wordMap.set(word, wordMap.get(word) + 1);
+    } else {
+      // если слова ещё нет, добавляем с 1
+      wordMap.set(word, 1);
+    }
+  }
 
-console.log(map);
+  return wordMap;
+}
+
+const words = ["яблоко", "банан", "яблоко"];
+console.log(countWords(words)); // Map { 'яблоко' => 2, 'банан' => 1 }
