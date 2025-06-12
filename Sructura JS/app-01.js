@@ -19,3 +19,5 @@ function sumScores(map) {
 const result = sumScores(education);
 
 console.log(result);
+
+// Все файн 😄

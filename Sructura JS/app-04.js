@@ -14,3 +14,5 @@ console.log(y);
 console.log(z);
 
 console.log(coords.length);
+
+// Все файн 😄

@@ -3,3 +3,5 @@ function showUser({ name, age }) {
 }
 
 showUser({ name: "Катя", age: 22 });
+
+// Все файн 😄
