@@ -9,3 +9,5 @@ const parseMap = new Map(JSON.parse(mapAsString));
 
 console.log(mapAsString);
 console.log(parseMap);
+
+// Все файн 😄

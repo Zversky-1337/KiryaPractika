@@ -7,6 +7,16 @@ const user = {
   },
 };
 
-const result = JSON.stringify(user);
+//Решение должно было быть таким
+const user2 = {
+  name: "Оля",
+  age: 28,
+  password: "секрет",
+  toJSON() {
+    return JSON.stringify({ name: this.name, age: this.age });
+  },
+};
+
+const result = JSON.stringify(user2);
 
 console.log(result);
