@@ -1,5 +1,6 @@
 const user = { name: "Иван", age: 25, city: "Москва" };
 
+// Доставай только нужные поля
 const { name, age, city } = user;
 
 console.log(name);

@@ -15,7 +15,7 @@ function countWords(arr) {
 }
 
 const words = ["яблоко", "яблоко", "банан", "яблоко"];
-console.log(countWords(words)); // Map { 'яблоко' => 2, 'банан' => 1 }
+console.log(countWords(words)); // Map { 'яблоко' => 3, 'банан' => 1 }
 
 // Все файн 😄
 

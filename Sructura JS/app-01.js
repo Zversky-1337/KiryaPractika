@@ -10,6 +10,7 @@ education.forEach((score, surname) => {
 
 function sumScores(map) {
   let sum = 0;
+
   for (const score of map.values()) {
     sum += score;
   }

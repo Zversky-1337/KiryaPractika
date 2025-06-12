@@ -17,6 +17,6 @@ const user2 = {
   },
 };
 
-const result = JSON.stringify(user2);
+const result = user2.toJSON()
 
 console.log(result);
