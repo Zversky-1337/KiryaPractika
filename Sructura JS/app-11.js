@@ -13,13 +13,14 @@ const config = {
   },
 };
 
-const { server, db } = config;
-
-const { host, port } = server;
-
-const { user, password, options } = db;
-
-const { poolSize, timeout } = options;
+const {
+  server: { host, port },
+  db: {
+    user,
+    password,
+    options: { poolSize, timeout },
+  },
+} = config;
 
 console.log(host, port, user, poolSize);
 
