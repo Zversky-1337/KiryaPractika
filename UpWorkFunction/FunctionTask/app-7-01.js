@@ -1,31 +1,23 @@
 // function printNumbers(from, to) {
-//   let count = 1;
-
-//   setTimeout(() => {
-//     const intrvalId = setInterval(() => {
-//       return console.log(count++);
-//     }, 1000);
-
-//     setTimeout(() => {
+//   const intrvalId = setInterval(() => {
+//     if (from <= to) {
+//       console.log(from++);
+//     } else {
 //       clearInterval(intrvalId);
-//     }, to - from);
-//   }, from);
+//     }
+//   }, 1000);
 // }
 
-// printNumbers(5000, 10000);
+// printNumbers(4, 8);
 
 // function printNumbers(from, to) {
-//   let count = 1;
-//   let timerId;
-//   setTimeout(function start() {
-//     timerId = setTimeout(function newNumbers() {
-//       console.log(count++);
-//       timerId = setTimeout(newNumbers, 1000);
-//     }, 0);
-//     setTimeout(() => {
-//       clearTimeout(timerId);
-//     }, to - from);
-//   }, from);
+//   function print() {
+//     if (from <= to) {
+//       console.log(from++);
+//       setTimeout(print, 1000);
+//     }
+//   }
+//   print();
 // }
 
-// printNumbers(5000, 10000);
+// printNumbers(4, 8);
