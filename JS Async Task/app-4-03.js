@@ -19,20 +19,7 @@ Promise.resolve().then(() => console.log("6"));
 
 console.log("7");
 
-// Мой ответ
-// '1'
-// '3'
-// '7'
-// '4'
-// '6'
-// '2'
-// '5'
+// https://www.jsv9000.app/?code=ZnVuY3Rpb24gbWFpbigpIHsNCiAgY29uc29sZS5sb2coJzEnKTsNCiAgDQogIHZhciBwcm9taXNlID0gbmV3IFByb21pc2UoZnVuY3Rpb24gcHJvbWlzZUV4ZWN1dG9yKHJlc29sdmUpIHsNCiAgICBjb25zb2xlLmxvZygnMicpOw0KICAgIHNldFRpbWVvdXQocmVzb2x2ZSwgMCk7DQogIH0pOw0KICANCiAgcHJvbWlzZS50aGVuKGZ1bmN0aW9uIG9uUHJvbWlzZVJlc29sdmVkKCkgew0KICAgIGNvbnNvbGUubG9nKCczJyk7DQogICAgUHJvbWlzZS5yZXNvbHZlKCkudGhlbihmdW5jdGlvbiBvbk1pY3JvdGFzaygpIHsNCiAgICAgIGNvbnNvbGUubG9nKCc0Jyk7DQogICAgfSk7DQogIH0pOw0KfQ0KDQpmdW5jdGlvbiBvblRpbWVvdXQ1KCkgew0KICBjb25zb2xlLmxvZygnNScpOw0KfQ0KDQpmdW5jdGlvbiBvbk1pY3JvdGFzazYoKSB7DQogIGNvbnNvbGUubG9nKCc2Jyk7DQp9DQoNCnNldFRpbWVvdXQob25UaW1lb3V0NSwgMCk7DQptYWluKCk7DQpQcm9taXNlLnJlc29sdmUoKS50aGVuKG9uTWljcm90YXNrNik7DQpjb25zb2xlLmxvZygnNycpOw%3D%3D
+// http://latentflip.com/loupe/?code=ZnVuY3Rpb24gbWFpbigpIHsNCiAgY29uc29sZS5sb2coJzEnKTsNCiAgDQogIHZhciBwcm9taXNlID0gbmV3IFByb21pc2UoZnVuY3Rpb24gcHJvbWlzZUV4ZWN1dG9yKHJlc29sdmUpIHsNCiAgICBjb25zb2xlLmxvZygnMicpOw0KICAgIHNldFRpbWVvdXQocmVzb2x2ZSwgMCk7DQogIH0pOw0KICANCiAgcHJvbWlzZS50aGVuKGZ1bmN0aW9uIG9uUHJvbWlzZVJlc29sdmVkKCkgew0KICAgIGNvbnNvbGUubG9nKCczJyk7DQogICAgUHJvbWlzZS5yZXNvbHZlKCkudGhlbihmdW5jdGlvbiBvbk1pY3JvdGFzaygpIHsNCiAgICAgIGNvbnNvbGUubG9nKCc0Jyk7DQogICAgfSk7DQogIH0pOw0KfQ0KDQpmdW5jdGlvbiBvblRpbWVvdXQ1KCkgew0KICBjb25zb2xlLmxvZygnNScpOw0KfQ0KDQpmdW5jdGlvbiBvbk1pY3JvdGFzazYoKSB7DQogIGNvbnNvbGUubG9nKCc2Jyk7DQp9DQoNCnNldFRpbWVvdXQob25UaW1lb3V0NSwgMCk7DQptYWluKCk7DQpQcm9taXNlLnJlc29sdmUoKS50aGVuKG9uTWljcm90YXNrNik7DQpjb25zb2xlLmxvZygnNycpOw%3D%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
 
-// Правильный ответ
-// 1
-// 2
-// 7
-// 6
-// 5
-// 3
-// 4
+// 1, 2, 7, 6, 5, 3, 4
