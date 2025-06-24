@@ -17,3 +17,5 @@ function request2(url) {
 }
 
 Promise.race([request1("1"), request2("2")]).then(console.log);
+
+// Все файн 😄

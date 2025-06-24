@@ -12,13 +12,25 @@ let item = {
   },
 };
 
+// function printList(list) {
+//   if (list.next === null) {
+//     return console.log(list.value);
+//   } else {
+//     printList(list.next);
+//     return console.log(list.value);
+//   }
+// }
+
+
 function printList(list) {
-  if (list.next === null) {
-    return console.log(list.value);
-  } else {
-    printList(list.next);
-    return console.log(list.value);
+  console.log(list.value); // выводим текущий элемент
+
+  if (list.next) {
+    printList(list.next); // делаем то же самое для остальной части списка
   }
 }
 
-printList(item);
+
+printList(item)
+
+// Все файн 😄 (Более лаконичный варик выше)

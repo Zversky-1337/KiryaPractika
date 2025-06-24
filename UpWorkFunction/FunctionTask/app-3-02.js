@@ -1,15 +1,20 @@
-function makeWorker() {
-  let name = "Pete";
-
-  return function () {
-    alert(name);
-  };
+const fn = () => {
+  console.log(name);
 }
 
+const  makeWorker = () => {
+  let name = "Pete";
+
+  fn()
+}
+
+makeWorker();
 let name = "John";
 
 // создаём функцию
-let work = makeWorker();
+// let work =
 
 // вызываем её
-work(); // Pete еееее 2 из 2 сюда блин
+// work();
+
+// Все файн 😄

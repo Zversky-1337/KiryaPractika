@@ -5,11 +5,14 @@ function square(num) {
   }
   return num * num;
 }
-
+//
 try {
   // попробуй вызвать с числом и строкой
-  console.log("Результат:", square(4));
+  // console.log("Результат:", square(4));
   console.log("Результат:", square("abc"));
 } catch (error) {
   console.log("Ошибка:", error.message);
 }
+
+// Все файн 😄
+
