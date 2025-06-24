@@ -1,9 +1,13 @@
+'use strict'
+
 function f() {
-  alert(this); //
+  console.log(this); //
 }
 
 let user = {
   g: f.bind(null),
 };
 
-user.g(); //  null
+user.g(); // null
+
+// Все файн 😄
