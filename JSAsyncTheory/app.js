@@ -155,3 +155,74 @@
 //   .catch((error) => {
 //     console.log("Greate", error);
 //   });
+
+// console.log("1");
+
+// setTimeout(() => {
+//   console.log("setTimeout 1");
+//   Promise.resolve().then(() => {
+//     console.log("promise setTimeout");
+//   });
+// }, 0);
+
+// setTimeout(() => {
+//   console.log("setTimeout 2");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//   console.log("promise 1");
+// });
+
+// Promise.resolve().then(() => {
+//   console.log("promise 2");
+// });
+// console.log("4");
+
+// ("1");
+// ("4");
+// ("promise 1");
+// ("promise 2");
+// ("setTimeout 1");
+// ("promise setTimeout");
+// ("setTimeout 2");
+
+// function request(delay, isRejected) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (isRejected) {
+//         reject(`${delay} was rejected`);
+//       } else {
+//         resolve(`${delay} was resolved`);
+//       }
+//     }, delay * 1000);
+//   });
+// }
+
+// const data = [
+//   {
+//     value: 1,
+//     isRejected: false,
+//   },
+//   {
+//     value: 2,
+//     isRejected: false,
+//   },
+//   {
+//     value: 3,
+//     isRejected: false,
+//   },
+// ];
+
+// const promises = data.map(({ value, isRejected }) => {
+//   return request(value, isRejected);
+// });
+
+// console.log(promises);
+
+// (async function () {
+//   for await (let data of promises) {
+//     console.log(data);
+//   }
+// })();
+
+// Promise.all(promises);

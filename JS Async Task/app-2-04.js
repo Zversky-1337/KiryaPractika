@@ -1,5 +1,7 @@
-fetch("<https://jsonplaceholder.typicode.com/users/1>")
-  .then()
-  .catch((error) => {
-    console.log("Error", error);
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => {
+    return response.json();
+  })
+  .then((user1) => {
+    console.log(user1[0].name);
   });
