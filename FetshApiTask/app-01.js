@@ -77,7 +77,9 @@ async function logApi2() {
     arrayPromises.forEach(([userText, userPost]) => {
       console.log(`${userText} \n ${userPost}`);
     });
-  } catch {}
+  } catch (error) {
+    console.error("Произошла ошибка:", error.message);
+  }
 }
 
 logApi2();
