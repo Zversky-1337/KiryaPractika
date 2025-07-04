@@ -1,49 +1,53 @@
 function logApi() {
-  const arrayPromises = [];
-  for (let i = 0; i < 10; i++) {
-    arrayPromises.push(
-      new Promise((resolve, reject) => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`Ошибка: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((arr) => {
-            const text = `Пользователь: {${arr[i].name}} ({${arr[i].email}})`;
-            resolve(text);
-          })
-          .catch();
-      })
-    );
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(
+          `Ошибка при получении пользователей: ${response.status}`
+        );
+      }
+      return response.json();
+    })
+    .then((users) => {
+      const arrayPromises = [];
+      let i = 0;
 
-    arrayPromises.push(
-      new Promise((resolve, reject) => {
-        fetch(`https://jsonplaceholder.typicode.com/posts?userId=${i + 1}`)
+      while (i < users.length) {
+        const user = users[i];
+
+        const userText = `Пользователь: ${user.username} (${user.email})`;
+
+        const postsPromise = fetch(
+          `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`
+        )
           .then((response) => {
             if (!response.ok) {
-              throw new Error(`Ошибка: ${response.status}`);
+              throw new Error(
+                `Ошибка при получении постов пользователя ${user.id}`
+              );
             }
             return response.json();
           })
-          .then((arr) => {
-            let text = "Посты: \n";
-            arr.forEach((j) => {
-              text += `- {${j.title}} \n`;
+          .then((posts) => {
+            let text = "Посты:\n";
+            posts.forEach((post) => {
+              text += `- ${post.title}\n`;
             });
-            resolve(text);
-          })
-          .catch();
-      })
-    );
-  }
-  Promise.all(arrayPromises).then((arr) => {
-    for (let i = 0; i < arr.length; i++) {
-      console.log(`${arr[i]} \n ${arr[i + 1]}`);
-      i++;
-    }
-  });
+            return [userText, text];
+          });
+
+        arrayPromises.push(postsPromise);
+        i++;
+      }
+
+      return Promise.all(arrayPromises);
+    })
+    .then((arr) => {
+      arr.forEach(([userText, postsText]) => {
+        console.log(`${userText} \n ${postsText}`);
+      });
+    })
+    .catch((error) => console.error("Произошла ошибка:", error.message));
 }
 
 logApi();
