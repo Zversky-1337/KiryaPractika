@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app-7.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form id="contact-form">
+      <h2>Обратная связь</h2>
+
+      <div>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" required />
+        <span id="name-error" style="color: red"></span>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <span id="email-error" style="color: red"></span>
+      </div>
+
+      <div>
+        <label for="message">Сообщение:</label>
+        <textarea id="message" required></textarea>
+        <span id="message-error" style="color: red"></span>
+      </div>
+
+      <button type="submit">Отправить</button>
+      <div id="form-result"></div>
+    </form>
+  </body>
+</html>

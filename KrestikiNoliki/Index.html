@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>🎮 Крестики-нолики</h1>
+
+      <div class="game-info">
+        <div id="current-player" class="current-player">
+          Ход игрока: <span class="player-symbol">X</span>
+        </div>
+        <div id="game-status" class="game-status"></div>
+      </div>
+
+      <div class="game-board" id="game-board">
+        <!-- 9 кнопок будут созданы через JavaScript -->
+      </div>
+
+      <button id="reset-btn" class="reset-button">🔄 Новая игра</button>
+
+      <div class="rules">
+        <h3>Правила игры:</h3>
+        <p>
+          Постройте линию из 3-х символов по горизонтали, вертикали или
+          диагонали
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

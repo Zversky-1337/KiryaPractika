@@ -56,3 +56,59 @@
 
 // const str = new String('I am string')
 // str.sayHello()
+
+// class Student {
+//   planet = "Planet";
+//   country = "Russia";
+//   region;
+
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   logAge() {
+//     console.log(this.age);
+//   }
+// }
+
+// const firstStudent = new Student("Max", 25);
+// const secondStudent = new Student("Egor", 19);
+
+// function makeCounter() {
+//   let count = 0; // приватная переменная
+
+//   return function() {
+//     count++;
+//     return count;
+//   }
+// }
+
+// const counter = makeCounter();
+
+// console.log(counter()); // 1
+// console.log(counter()); // 2
+// console.log(counter()); // 3
+
+// function greet(greeting, name) {
+//   console.log(greeting + ", " + name + "!");
+// }
+
+// greet.call(null, "Привет", "Кирилл"); // "Привет, Кирилл!"
+
+// greet("Привет", "Кирилл");
+
+function loadData(callback) {
+  setTimeout(() => {
+    const data = { name: "Иван", age: 25 };
+    callback(null, data); // Первый аргумент — ошибка, второй — данные
+  }, 1000);
+}
+
+loadData((error, result) => {
+  if (error) {
+    console.error("Произошла ошибка:", error);
+  } else {
+    console.log("Данные загружены:", result);
+  }
+});
