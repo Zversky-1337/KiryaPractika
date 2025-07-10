@@ -15,3 +15,6 @@ for (const user of users) {
 const result = Array.from(map.values());
 
 console.log(result);
+
+
+// Все файн 😄

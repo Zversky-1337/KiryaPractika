@@ -14,5 +14,17 @@ function countWords(arr) {
   return wordMap;
 }
 
-const words = ["яблоко", "банан", "яблоко"];
-console.log(countWords(words)); // Map { 'яблоко' => 2, 'банан' => 1 }
+const words = ["яблоко", "яблоко", "банан", "яблоко"];
+console.log(countWords(words)); // Map { 'яблоко' => 3, 'банан' => 1 }
+
+// Все файн 😄
+
+// Есть еще такой вариант решения
+arr.forEach((word) => {
+  if (!wordMap.has(word)) {
+    wordMap.set(word, 1);
+    return
+  }
+
+  wordMap.set(word, wordMap.get(word) + 1);
+})

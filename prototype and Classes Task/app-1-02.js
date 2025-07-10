@@ -9,3 +9,8 @@ let rabbit = {
 };
 
 rabbit.eat(); // rabbit
+
+
+Object.setPrototypeOf(rabbit, animal);
+
+// Все файн 😄

@@ -1,4 +1,11 @@
-const arr = [];
+const arr = [
+    mockRequest,
+    mockRequest,
+    mockRequest,
+    mockRequest,
+    mockRequest
+];
+
 function mockRequest(name) {
   let promise = new Promise((resolve) => {
     setTimeout(() => {
@@ -8,13 +15,15 @@ function mockRequest(name) {
   return promise;
 }
 
-Promise.all([
-  mockRequest("Запрос 1"),
-  mockRequest("Запрос 2"),
-  mockRequest("Запрос 3"),
-  mockRequest("Запрос 4"),
-  mockRequest("Запрос 5"),
-]).then((names) => {
+// arr.forEach((mockRequest, index) => {
+//   mockRequest(`Task ${index + 1}`).then((name => {
+//     console.log(name);
+//   }))
+// });
+
+Promise.all([mockRequest('Task 1'), mockRequest('Task 2'), mockRequest('Task 3'), mockRequest('Task 4'), mockRequest('Task 5')]).then((names) => {
   console.log("Все запросы завершены:");
   names.forEach((name) => console.log(name));
 });
+
+// Все файн 😄
