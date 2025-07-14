@@ -1,13 +1,16 @@
-// declaration of defer method on Function prototype
-Function.prototype.defer = (ms) => {
-  // use this to refer to the function itself
-  return setTimeout(f, ms);
+Function.prototype.defer = function(ms)  {
+  return setTimeout(this, ms);
 };
 
 function f() {
-  console.log("Hello!");
+  console.log("Hello! f");
+}
+
+function b() {
+  console.log("Hello! b");
 }
 
 f.defer(1000); // выведет "Hello!" через 1 секунду
+b.defer(1000);
 
 // you're clown 🤡

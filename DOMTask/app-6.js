@@ -5,6 +5,13 @@ const nextBtn = document.getElementById("next-btn"); // кнопка впере�
 const imageCounter = document.getElementById("image-counter"); // счетчик
 
 // TODO: Создать массив URL изображений
+
+function main() {
+  // Инициализация галереи
+  galleryImage.src = images[0];
+}
+
+// Почему по умолчнаю нет картнки 🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡
 const images = [
   "https://picsum.photos/300/200?random=1",
   "https://picsum.photos/300/200?random=2",
@@ -56,3 +63,5 @@ prevBtn.addEventListener("click", showPrevious);
 // TODO: Добавить обработчики кликов
 
 console.log("Галерея готова");
+
+main()

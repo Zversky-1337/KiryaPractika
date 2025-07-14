@@ -26,11 +26,13 @@ console.log("Переключатель готов");
 // const toggleBtn = document.getElementById("toggle-btn");
 // const textBlock = document.getElementById("text-block");
 
-// toggleBtn.addEventListener("click", () => {
-//   const isHidden = textBlock.style.display === "none";
+toggleBtn.addEventListener("click", () => {
+  const isHidden = textBlock.style.display === "none";
 
-//   textBlock.style.display = isHidden ? "block" : "none";
-//   toggleBtn.textContent = isHidden ? "Скрыть текст" : "Показать текст";
-// });
+  textBlock.style.display = isHidden ? "block" : "none";
+  toggleBtn.textContent = isHidden ? "Скрыть текст" : "Показать текст";
+});
 
 // console.log("Переключатель готов");
+
+// Все файн 😄
