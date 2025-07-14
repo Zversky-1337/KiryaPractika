@@ -5,3 +5,5 @@ function doAsync(callback) {
 doAsync(() => {
   console.log("Результат");
 });
+
+// Все файн 😄

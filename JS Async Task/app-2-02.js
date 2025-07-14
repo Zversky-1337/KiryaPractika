@@ -9,3 +9,5 @@ function asyncPromise() {
 asyncPromise().then((msg) => {
   console.log("Результат:", msg);
 });
+
+// Все файн 😄

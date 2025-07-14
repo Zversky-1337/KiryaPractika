@@ -16,3 +16,6 @@ console.log(rabbit.jumps); // ? (null)
 delete animal.jumps;
 
 console.log(rabbit.jumps); // ? (undefined)
+
+
+// Все файн 😄

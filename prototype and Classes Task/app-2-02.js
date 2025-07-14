@@ -17,3 +17,5 @@ class Dog extends Animal {
 const dog = new Dog();
 console.log(dog.speak()); // "Гав!"
 console.log(dog.fetch()); // "Принес палку!"
+
+// Все файн 😄

@@ -4,18 +4,18 @@ const resetBtn = document.getElementById("reset"); // найти кнопку "�
 
 let count = 0;
 
-function updateDisplay() {
+function render() {
   counterDisplay.textContent = count;
 }
 
 incrementBtn.addEventListener("click", () => {
   count++;
-  updateDisplay();
+  render();
 });
 
 resetBtn.addEventListener("click", () => {
   count = 0;
-  updateDisplay();
+  render();
 });
 
 // TODO: Добавить обработчик клика для кнопки "+1"

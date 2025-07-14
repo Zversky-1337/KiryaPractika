@@ -7,3 +7,6 @@ class StringArray extends Array {
 // Проверка
 const arr = new StringArray("hello", "world");
 console.log(arr.join(" ")); // "HELLO WORLD"
+
+
+// Все файн 😄

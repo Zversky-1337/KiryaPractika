@@ -18,6 +18,10 @@ let pockets = {
   __proto__: bed,
 };
 
-console.log(pockets.pen); // 3
+for (let key in pockets) {
+  console.log(key);
+}
 console.log(bed.glasses); // 1
 console.log(table.money); // undefined
+
+// Все файн 😄

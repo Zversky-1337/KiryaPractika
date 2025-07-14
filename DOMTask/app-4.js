@@ -51,3 +51,38 @@ itemInput.addEventListener("keydown", (event) => {
 // TODO: Добавить обработчик нажатия Enter в поле ввода
 
 console.log("Список покупок готов");
+
+
+function createDeleteButton(listItem) {
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Удалить";
+  deleteBtn.addEventListener("click", () => removeItem(listItem));
+  return deleteBtn;
+}
+
+// Создание элемента списка
+function createListItem(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+  li.appendChild(createDeleteButton(li));
+  return li;
+}
+
+// Добавление элемента
+function addItem() {
+  const text = itemInput.value.trim();
+  if (text === "") {
+    itemInput.value = "";
+    return;
+  }
+  const li = createListItem(text);
+  shoppingList.appendChild(li);
+  itemInput.value = "";
+}
+
+// Удаление элемента
+function removeItem(listItem) {
+  listItem.remove();
+}
+
+// you're clown 🤡
